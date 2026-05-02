@@ -31,8 +31,8 @@ header #iconos a {
 }
 
 .imagenLogo {
-    width: 95px;
-    border-radius: 8px;
+    width: 160px;
+    border-radius: 1px;
     margin: 5px;
     box-shadow: 3px 3px 3px black;
     /*background: url('imagenes/logo.png') 0 0; */
