@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar (Misma que tus otras páginas) -->
     <nav class="navbar">
         <div class="logo">
             <a href="index.html">
                 <img src="img/logo.png" alt="Logo MocoSoft" class="logo-img">
             </a>
         </div>
-        <button class="menu-toggle" id="mobile-menu">
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -28,46 +27,28 @@
     </nav>
 
     <main class="profile-container">
-        <section class="card-individual">
-            <h1>Contacto</h1>
-            <p>¿Tenés un proyecto en mente? ¡Escribime!</p>
-            
-            <form id="contact-form" class="info-grid">
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué puedo ayudarte?" required></textarea>
-                </div>
-
-                <button type="submit" class="btn-primary">Enviar Mensaje</button>
-            </form>
-
-            <div class="social-links">
-                <h3>También podés encontrarme en:</h3>
-                <div class="disco-grid">
-                    <a href="#" class="disco-item">
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="#" class="disco-item">
-                        <span>GitHub</span>
-                    </a>
-                </div>
-            </div>
-
-            <button id="dark-mode-toggle" class="btn-primary" style="margin-top: 20px;">
-                🌙 Modo Oscuro
-            </button>
-        </section>
+    <section class="card-individual">
+        <h2>Contáctanos</h2>
+        <p style="margin-bottom: 20px;">¿Tenés alguna consulta o propuesta? Dejanos tu mensaje.</p>
+        
+        <form class="contact-form" id="contact-form" action="#" method="post">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            <button type="submit" class="btn-primary" id="btn-enviar">Enviar Mensaje</button>
+        </form>
+        
+        <!-- Elemento para mostrar el mensaje de éxito) -->
+        <div id="mensaje-exito" class="hidden" style="margin-top: 20px; color: var(--accent); font-weight: 600;">
+            ¡Gracias por escribirnos! Te responderemos a la brevedad.
+        </div>
+        
+        <button id="dark-mode-toggle" class="btn-primary" style="margin-top: 30px;">Modo Oscuro</button>
+    </section>
     </main>
+    <footer>
+        <p>&copy; 2026 MocoSoft - Todos los derechos reservados - Trabajo Práctico 1</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
