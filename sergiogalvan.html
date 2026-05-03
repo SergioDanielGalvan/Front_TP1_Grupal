@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Alejandro Rodriguez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="img/logo.png" alt="Logo MocoSoft" class="logo-img">
+            </a>
+        </div>
+        
+        <!-- Botón Hamburguesa -->
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#nosotros" class="activeS">Nosotros</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="profile-container">
+        <div class="card-individual" id="profile-card">
+            <img src="img/avatarsergio.png" alt="Sergio Galván" class="profile-avatar">
+            <h1>Sergio Daniel Galván</h1>
+            <p class="data-item"><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
+            <p class="data-item"><strong>Edad:</strong> 65 años</p>
+
+            <div class="info-grid">
+                <section>
+                    <h3>Habilidades</h3>
+                    <ul>
+                        <li>Backend: PhP, NodeJs</li>
+                        <li>Frontend: HTML, CSS, JavaScript, Boostrap, Angular, React</li>
+                        <li>Plataforma NET: C#, VB.NET, ADO.NET</li>
+                        <li>Android Studio (Kotlin)</li>
+                        <li>Base de Datos: MySQL, SQL Server/MS-Access, PostgreSQL</li>
+                        <li>Lenguajes: C, C++, Java, xBase, Python, SmallTalk</li>
+                    </ul>
+                </section>
+                
+                <section class="info-section">
+                    <h3>Peliculas</h3>
+                    <div class="film-grid">
+                        <div class="film-item">
+                            <img src="img/film/2001.png" alt="Película 2001, Una Odisea en el Epsacio ">
+                            <p>2001, Una Odisea en el Espacio</p>
+                            <a href="https://www.youtube.com/watch?v=yf52KZnje_8" target="_blank" class="btn-film-round" title="Ver Tráiler"><span class="play-icon">▶</span></a>
+                        </div>
+                        <div class="film-item">
+                            <img src="img/film/dune2.png" alt="Película Dune, Parte Dos">
+                            <p>Dune, Parte Dos</p>
+                            <a href="https://www.youtube.com/watch?v=esezQhsrix0" target="_blank" class="btn-film-round" title="Ver Tráiler"><span class="play-icon">▶</span></a>
+                        </div>
+                        <div class="film-item">
+                            <img src="img/film/lasdostorres.png" alt="El Señor de los Anillos, Las dos Torres">
+                            <p>El Señor de los Anillos, Las dos Torres</p>
+                            <a href="https://www.youtube.com/watch?v=GPAOgWeAU-E" target="_blank" class="btn-film-round" title="Ver Tráiler"><span class="play-icon">▶</span></a>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="info-section">
+                    <h3>Música/Discos</h3>
+                    <div class="discos-grid">
+                        <div class="disc-item">
+                            <img src="img/disc/thewall.png" alt="Tapa The Wall">
+                            <p>The Wall - Pink Floyd</p>
+                            <a href="https://open.spotify.com/intl-es/album/2wV2nY2P5vHYiUNTWWzXj5?si=pHeGOB3gRByxYbS6mTMZjw" target="_blank" class="btn-spotify-round" title="Escuchar en Spotify"><span class="music-icon">♪</span></a>
+                        </div>
+                        <div class="disc-item">
+                            <img src="img/disc/queenjazz.png" alt="Tapa Jazz">
+                            <p>Jazz - The Queen</p>
+                            <a href="https://open.spotify.com/intl-es/album/0RvMRxxQUVQp2jb3CIbg5g?si=SyrPWn8wTWW5I56xRJsJjQ" target="_blank" class="btn-spotify-round" title="Escuchar en Spotify"><span class="music-icon">♪</span></a>
+                        </div>
+                        <div class="disc-item">
+                            <img src="img/disc/mediterraneo.png" alt="Tapa Mediterráneo">
+                            <p>Mediterráneo - Joan Manuel Serrat</p>
+                            <a href="https://open.spotify.com/intl-es/album/7cmjeaLyvhiCqRA5MmXuYq?si=l_ic2JBlSRSVy5AhKRi_Nw" target="_blank" class="btn-spotify-round" title="Escuchar en Spotify"><span class="music-icon">♪</span></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Interacción JS Obligatoria -->
+            <button id="change-style" class="btn-primary">Cambiar Estilo de Tarjeta</button>
+            <button id="dark-mode-toggle" class="btn-primary">Modo Oscuro</button>
+            
+            <div class="nav-footer">
+                <a href="index.html" class="btn-back">← Volver al Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Función dinámica obligatoria para la página individual
+        const btn = document.getElementById('change-style');
+        const card = document.getElementById('profile-card');
+
+        btn.addEventListener('click', () => {
+            card.style.backgroundColor = card.style.backgroundColor === 'rgb(232, 24af, 243)' ? '#ffffff' : '#e8f7f3';
+            card.style.border = '2px solid var(--accent)';
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 MocoSoft - Todos los derechos reservados - Trabajo Práctico 1</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
