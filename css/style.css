@@ -1,4 +1,6 @@
-/* Variables de color */
+/* ==========================================================================
+   1. VARIABLES Y ESTILOS GLOBALES
+   ========================================================================== */
 :root {
     --primary: #2d3436;
     --accent: #00b894;
@@ -25,56 +27,44 @@ h1, h2, h3 {
     color: var(--primary);
 }
 
-/* --- Estilos Base Navbar --- */
+.hidden { display: none; }
 
-/* Estilos del contenedor del logo */
+/* ==========================================================================
+   2. NAVEGACIÓN (NAVBAR Y LOGO)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .logo a {
     display: flex;
-    align-items: center; /* Centra verticalmente imagen y texto */
+    align-items: center;
     text-decoration: none;
     color: var(--primary);
     font-weight: 600;
     font-size: 1.5rem;
 }
 
-/* Control del tamaño de la imagen del logo */
 .logo-img {
-    height: 40px; /* Ajustá la altura según tu diseño */
-    width: auto;  /* Mantiene la proporción */
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    height: 40px;
+    width: auto;
+    margin-right: 10px; 
     transition: transform 0.3s ease;
 }
 
-/* Efecto opcional: el logo se agranda un poquito al pasar el mouse */
-.logo-img:hover {
-    transform: scale(1.1);
+.logo-img:hover { 
+    transform: scale(1.1); 
 }
-
-.logo span {
-    color: var(--accent);
-}
-
-/* Ajuste para pantallas pequeñas (Breakpoint 400px) */
-@media (max-width: 400px) {
-    .logo-img {
-        height: 30px; /* Logo más chico en móviles pequeños */
-    }
-    .logo a {
-        font-size: 1.2rem;
-    }
-}
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.logo span { 
+    color: var(--accent); 
 }
 
 .nav-links {
@@ -84,7 +74,6 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-    font-family: 'Roboto', sans-serif; 
     font-weight: 500;
     font-size: 1.1rem;
     text-decoration: none;
@@ -96,7 +85,6 @@ h1, h2, h3 {
     color: var(--accent);
 }
 
-/* --- Botón Hamburguesa (Oculto por defecto) --- */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -110,49 +98,15 @@ h1, h2, h3 {
     width: 25px;
     height: 3px;
     background-color: var(--primary);
-    transition: 0.3s;
 }
 
-/* --- RESPONSIVE: Breakpoint 900px (Tablets y Móviles) --- */
-@media (max-width: 900px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 100%; /* Justo debajo del nav */
-        left: -100%; /* Escondido a la izquierda */
-        flex-direction: column;
-        background-color: var(--white);
-        width: 100%;
-        text-align: center;
-        transition: 0.4s;
-        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-        padding: 20px 0;
-    }
-
-    /* Clase que activaremos con JS */
-    .nav-links.active {
-        left: 0;
-    }
-
-    /* Animación del icono (X) */
-    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
-    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-}
-
-/* Ajustes para Móvil Pequeño (400px) */
-@media (max-width: 400px) {
-    .logo { font-size: 1.2rem; }
-    .nav-links a { font-size: 1.1rem; padding: 10px 0; }
-}
-
-/* Hero Section */
+/* ==========================================================================
+   3. SECCIÓN HERO Y BOTONES
+   ========================================================================== */
 .hero {
     height: 60vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -162,15 +116,16 @@ h1, h2, h3 {
 }
 
 .hero h1 { 
-    color: white; 
-    font-size: 3rem; margin-bottom: 1rem;
+    color: white;
+    font-size: 3rem; 
+    margin-bottom: 1rem; 
 }
 .hero p { 
-    max-width: 600px;
-    margin-bottom: 2rem;
-    font-size: 1.1rem; }
+    max-width: 600px; 
+    margin-bottom: 2rem; 
+    font-size: 1.1rem; 
+}
 
-/* Botones */
 .btn-primary {
     padding: 12px 30px;
     background: var(--accent);
@@ -178,32 +133,49 @@ h1, h2, h3 {
     color: white;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 1rem;
     transition: transform 0.3s;
 }
 
-.btn-primary:hover { transform: scale(1.05); }
+.btn-primary:hover { 
+    transform: scale(1.05); 
+}
 
-/* Grid de Integrantes */
-.team-container { padding: 4rem 5%; text-align: center; }
-.team-container h2 { margin-bottom: 3rem; font-size: 2rem; }
+/* ==========================================================================
+   4. PORTADA: GRILLA DE INTEGRANTES
+   ========================================================================== */
+.team-container { 
+    padding: 4rem 5%; 
+    text-align: center; 
+}
+.team-container h2 { 
+    margin-bottom: 3rem; 
+    font-size: 2rem; 
+}
 
 .grid-integrantes {
     display: grid;
     gap: 30px;
+    grid-template-columns: 1fr;
 }
 
-/* Card Estilo Moderno */
 .card {
     background: var(--white);
     padding: 30px;
     border-radius: 15px;
     text-decoration: none;
-    transition: box-shadow 0.3s;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    transition: all 0.3s ease;
 }
 
-.card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
 
 .card-img img {
     width: 100px;
@@ -214,57 +186,132 @@ h1, h2, h3 {
     border: 3px solid var(--accent);
 }
 
-.view-profile {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--accent);
-    font-weight: 600;
+.view-profile { 
+    margin-top: 15px; 
+    color: var(--accent); 
+    font-weight: 600; 
 }
 
-/* --- BREAKPOINTS OBLIGATORIOS --- */
-
-/* Móvil Pequeño (400px) */
-@media (min-width: 400px) {
-    .grid-integrantes { grid-template-columns: 1fr; }
+/* ==========================================================================
+   5. PÁGINAS INDIVIDUALES (SECCIONES VERTICALES)
+   ========================================================================== */
+.profile-container {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-/* Tablets (900px) */
+.card-individual {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--accent);
+    margin-bottom: 20px;
+}
+
+
+.info-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.disc-item, .film-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.disc-item:hover, .film-item:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
+
+.film-item img {
+    width: 55px;
+    height: 80px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.disc-item img {
+    width: 55px;
+    height: 55px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.btn-back { display: inline-block; 
+    margin-top: 30px; 
+    text-decoration: none; 
+    color: var(--text); 
+}
+
+/* ==========================================================================
+   6. BREAKPOINTS (RESPONSIVE)
+   ========================================================================== */
+
+/* Tablets y Menú Hamburguesa (900px) */
+@media (max-width: 900px) {
+    .menu-toggle { display: flex; }
+    .nav-links {
+        position: absolute;
+        top: 100%; left: -100%;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        transition: 0.4s;
+        text-align: center;
+    }
+    .nav-links.active { left: 0; }
+}
+
+/* Pantallas Medianas (A partir de 900px) */
 @media (min-width: 900px) {
-    .grid-integrantes {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas */
-        gap: 30px;
-        justify-content: center; /* Centra el contenido de la grilla */
+    .grid-integrantes { 
+        grid-template-columns: repeat(2, 1fr); 
     }
-
-    /* Seleccionamos al tercer integrante (Alejandro) */
     .grid-integrantes .card:last-child {
-        grid-column: 1 / span 2; /* Hace que ocupe el ancho de las 2 columnas */
-        justify-self: center;    /* Lo centra horizontalmente */
-        width: 50%;              /* Le damos el mismo ancho que los de arriba */
+        grid-column: 1 / span 2;
+        width: 50%;
+        justify-self: center;
     }
-
-    .hero h1 { font-size: 4rem; }
 }
 
-/* Pantallas Grandes (1200px) */
-/* Pantallas Grandes (1200px) */
+/* Pantallas Grandes (A partir de 1200px) */
 @media (min-width: 1200px) {
     .grid-integrantes {
-        display: grid;
-        /* Forzamos 3 columnas de igual tamaño */
         grid-template-columns: repeat(3, 1fr); 
-        gap: 30px;
-        max-width: 1100px; /* Ajusta el ancho total del contenedor */
-        margin: 0 auto;    /* Centra todo el grupo en la pantalla */
+        max-width: 1200px;
+        margin: 0 auto;
     }
-
-    /* Quitamos cualquier regla que hayamos puesto en el breakpoint anterior */
     .grid-integrantes .card:last-child {
         grid-column: auto; 
         width: 100%;
+        justify-self: stretch;
     }
+    .hero h1 { font-size: 4rem; }
 }
 
-/* Utilidades */
-.hidden { display: none; }
+/* Móviles Pequeños (400px) */
+@media (max-width: 400px) {
+    .logo-img { height: 30px; }
+    .navbar { padding: 1rem 5%; }
+}
