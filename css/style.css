@@ -195,6 +195,47 @@ h1, h2, h3 {
 /* ==========================================================================
    5. PÁGINAS INDIVIDUALES (SECCIONES VERTICALES)
    ========================================================================== */
+
+/* Colores específicos para el modo oscuro */
+body.dark-theme {
+    --light: #1e272e;    /* Fondo oscuro */
+    --white: #2f3640;    /* Fondo de las tarjetas */
+    --primary: #f5f6fa;  /* Títulos claros */
+    --text: #dcdde1;     /* Párrafos claros */
+}
+
+/* Ajustes adicionales para que se vea prolijo */
+body.dark-theme .card-individual, 
+body.dark-theme .disco-item, 
+body.dark-theme .pelicula-item {
+    background-color: var(--white);
+    color: var(--text);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.dark-theme .navbar {
+    background-color: var(--white);
+}
+
+body.dark-theme .nav-links a {
+    color: var(--primary);
+}
+
+body.dark-theme .disc-item, body.dark-theme .film-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #6f7d81;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+body.dark-theme .btn-spotify-round {
+    background-color: #1ed760;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
 .profile-container {
     padding: 60px 20px;
     display: flex;
@@ -262,6 +303,38 @@ h1, h2, h3 {
     margin-top: 30px; 
     text-decoration: none; 
     color: var(--text); 
+}
+
+.disco-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Empuja el botón al final */
+    padding: 15px;
+}
+
+.btn-spotify-round {
+    width: 45px;
+    height: 45px;
+    background-color: #1DB954;
+    border-radius: 50%; /* Lo hace redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.music-icon {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-spotify-round:hover {
+    background-color: #1ed760;
+    transform: scale(1.1) rotate(15deg); /* Un pequeño giro para que sea más dinámico */
+    box-shadow: 0 6px 12px rgba(29, 185, 84, 0.3);
 }
 
 /* ==========================================================================

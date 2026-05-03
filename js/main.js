@@ -37,3 +37,31 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.remove('active');
     }));
 });
+
+
+// Esperar a que el DOM esté cargado
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeBtn = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // 1. Verificar si el usuario ya tenía una preferencia guardada
+    const darkModeStatus = localStorage.getItem('dark-mode');
+
+    if (darkModeStatus === 'enabled') {
+        body.classList.add('dark-theme');
+        darkModeBtn.innerText = 'Modo Claro';
+    }
+
+    // 2. Escuchar el click en el botón
+    darkModeBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+        
+        if (body.classList.contains('dark-theme')) {
+            localStorage.setItem('dark-mode', 'enabled');
+            darkModeBtn.innerText = 'Modo Claro';
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+            darkModeBtn.innerText = 'Modo Oscuro';
+        }
+    });
+});

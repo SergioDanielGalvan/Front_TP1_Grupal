@@ -32,8 +32,8 @@
 
     <main class="profile-container">
         <div class="card-individual" id="profile-card">
-            <img src="img/avataralejandro.png" alt="Alejandro Rodriguez" class="profile-avatar">
-            <h1>Alejandro Sebastian Rodriguez</h1>
+            <img src="img/avatarsergio.png" alt="Sergio Galván" class="profile-avatar">
+            <h1>Sergio Daniel Galván</h1>
             <p class="data-item"><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
             <p class="data-item"><strong>Edad:</strong> 37 años</p>
 
