@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | MocoSoft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar (Misma que tus otras páginas) -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo MocoSoft" class="logo-img">
+            </a>
+        </div>
+        <button class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#nosotros">Nosotros</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+            <li><a href="contacto.html" class="activeS">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="profile-container">
+        <section class="card-individual">
+            <h1>Contacto</h1>
+            <p>¿Tenés un proyecto en mente? ¡Escribime!</p>
+            
+            <form id="contact-form" class="info-grid">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué puedo ayudarte?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar Mensaje</button>
+            </form>
+
+            <div class="social-links">
+                <h3>También podés encontrarme en:</h3>
+                <div class="disco-grid">
+                    <a href="#" class="disco-item">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="disco-item">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <button id="dark-mode-toggle" class="btn-primary" style="margin-top: 20px;">
+                🌙 Modo Oscuro
+            </button>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
