@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Alejandro Rodriguez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="img/logo.png" alt="Logo MocoSoft" class="logo-img">
+            </a>
+        </div>
+        
+        <!-- Botón Hamburguesa -->
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#nosotros" class="activeS">Nosotros</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="profile-container">
+        <div class="card-individual" id="profile-card">
+            <img src="img/avataralejandro.png" alt="Alejandro Rodriguez" class="profile-avatar">
+            <h1>Alejandro Sebastian Rodriguez</h1>
+            <p class="data-item"><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
+            <p class="data-item"><strong>Edad:</strong> 37 años</p>
+
+            <div class="info-grid">
+                <section>
+                    <h3>Habilidades</h3>
+                    <ul>
+                        <li>Edición Editorial</li>
+                        <li>Diseño Gráfico (Illustrator, Photoshop, InDesign y Premiere)</li>
+                        <li>Backend (Node.js & Express)</li>
+                        <li>Android Studio (Kotlin)</li>
+                    </ul>
+                </section>
+                
+                <section class="info-section">
+                    <h3>Peliculas</h3>
+                    <div class="film-grid">
+                        <div class="film-item">
+                            <img src="img/film/spiderman.png" alt="Pelicula Spiderman">
+                            <p>Spiderman</p>
+                        </div>
+                        <div class="film-item">
+                            <img src="img/film/matrix.png" alt="Pelicula Matrix">
+                            <p>Matrix</p>
+                        </div>
+                        <div class="film-item">
+                            <img src="img/film/elsecretodetusojos.png" alt="Pelicula El Secreto de Tus Ojos">
+                            <p>El Secreto de Tus Ojos</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="info-section">
+                    <h3>Música/Discos</h3>
+                    <div class="discos-grid">
+                        <div class="disc-item">
+                            <img src="img/disc/mividaloca.png" alt="Tapa Mi Vida Loca">
+                            <p>Mi Vida Loca - Los Autenticos Decadentes</p>
+                            <a href="https://open.spotify.com/intl-es/album/2wV2nY2P5vHYiUNTWWzXj5?si=pHeGOB3gRByxYbS6mTMZjw" target="_blank" class="btn-spotify-round" title="Escuchar en Spotify"><span class="music-icon">♪</span></a>
+                        </div>
+                        <div class="disc-item">
+                            <img src="img/disc/siguetucamino.png" alt="Tapa Sigue Tu Camino">
+                            <p>Sigue Tu Camino - Los Autenticos Decadentes</p>
+                            <a href="https://open.spotify.com/intl-es/album/0RvMRxxQUVQp2jb3CIbg5g?si=SyrPWn8wTWW5I56xRJsJjQ" target="_blank" class="btn-spotify-round" title="Escuchar en Spotify"><span class="music-icon">♪</span></a>
+                        </div>
+                        <div class="disc-item">
+                            <img src="img/disc/yernosperfectos.png" alt="Tapa Yernos Perfectos">
+                            <p>Yernos Perfectos - Los Caligaris</p>
+                            <a href="https://open.spotify.com/intl-es/album/7cmjeaLyvhiCqRA5MmXuYq?si=l_ic2JBlSRSVy5AhKRi_Nw" target="_blank" class="btn-spotify-round" title="Escuchar en Spotify"><span class="music-icon">♪</span></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Interacción JS Obligatoria -->
+            <button id="change-style" class="btn-primary">Cambiar Estilo de Tarjeta</button>
+            <button id="dark-mode-toggle" class="btn-primary">Modo Oscuro</button>
+            
+            <div class="nav-footer">
+                <a href="index.html" class="btn-back">← Volver al Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Función dinámica obligatoria para la página individual
+        const btn = document.getElementById('change-style');
+        const card = document.getElementById('profile-card');
+
+        btn.addEventListener('click', () => {
+            card.style.backgroundColor = card.style.backgroundColor === 'rgb(232, 24af, 243)' ? '#ffffff' : '#e8f7f3';
+            card.style.border = '2px solid var(--accent)';
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 MocoSoft - Todos los derechos reservados - Trabajo Práctico 1</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
