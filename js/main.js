@@ -91,5 +91,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- 5. BOTÓN CONOCER PROPÓSITO ---
+    const btnProposito = document.querySelector('.btn-primary');
+    const mensajeProposito = document.getElementById('mensaje-proposito');
 
+    if (btnProposito && mensajeProposito) {
+        btnProposito.addEventListener('click', () => {
+            // Quitamos la clase 'hidden' para que se vea
+            mensajeProposito.classList.toggle('hidden');
+            
+            // Opcional: Cambiar el texto del botón según el estado
+            if (mensajeProposito.classList.contains('hidden')) {
+                btnProposito.innerText = 'Conocer Propósito';
+            } else {
+                btnProposito.innerText = 'Ocultar Propósito';
+            }
+        });
+    }
 });
