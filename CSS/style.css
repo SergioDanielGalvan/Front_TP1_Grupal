@@ -297,8 +297,8 @@ body.dark-theme .btn-film-round {
 }
 
 .film-item img {
-    width: 131px;    /* 55 px de ancho */
-    height: 197px;   /* 80 px de alto para mantener proporción de poster */
+    width: 133px;    /* 55 px de ancho */
+    height: 200px;   /* 80 px de alto para mantener proporción de poster */
     border-radius: 4px;
     object-fit: cover;
 }
@@ -306,6 +306,7 @@ body.dark-theme .btn-film-round {
 .film-item summary {
     text-align: left;
     font-weight: bold;
+    width: 200px;
 }
 
 .film-item p {
@@ -351,8 +352,8 @@ body.dark-theme .btn-film-round {
 }
 
 .disc-item img {
-    width: 55px;
-    height: 55px;
+    width: 160px;
+    height: 160px;
     border-radius: 4px;
     object-fit: cover;
 }
