@@ -5,19 +5,19 @@ Trabajo Práctico Grupal 1  Proyecto Web en Equipo
 
 Bienvenido al repositorio oficial del Proyecto MocoSoft. Este sitio web ha sido desarrollado como parte del Trabajo Práctico N°1 de la Tecnicatura Superior en Desarrollo de Software.
 
-# Enlaces_del_Proyecto
+## Enlaces_del_Proyecto
 Sitio en Vivo (Vercel): front-tp-1-grupal.vercel.app
 
 Repositorio: GitHub - SergioDanielGalvan/Front_TP1_Grupal
 
-# Integrantes_del_Equipo
+## Integrantes_del_Equipo
 Alejandro Rodriguez: Maquetación en html, lógica de Modo Oscuro y gestión de contenido multimedia.
 
-Sergio Daniel Galván: Optimización de recursos gráficos y desarrollo de secciones de perfil.
+Sergio Daniel Galván: Creación de repositorio, optimización de recursos gráficos y desarrollo de secciones de perfil.
 
 Víctor Álvarez: Desarrollo de página de contacto y lógica de validación de formularios.
 
-# Tecnologías_y_Herramientas
+## Tecnologías_y_Herramientas
 Para este proyecto se utilizaron estándares modernos de desarrollo web:
 
 HTML5 Semántico: Uso de etiquetas como <header>, <main>, <nav>, <section> y <table> para asegurar accesibilidad y SEO.
@@ -34,7 +34,7 @@ Gestión de eventos (addEventListener) para formularios y menús.
 
 Control de Versiones: Git & GitHub (flujo de trabajo colaborativo mediante ramas y Pull Requests).
 
-# Funcionalidades_Destacadas
+## Funcionalidades_Destacadas
 Modo Oscuro Persistente: El usuario puede cambiar el tema del sitio, y su preferencia se guarda en el navegador para futuras visitas.
 | Modo Claro | Modo Oscuro |
 | :---: | :---: |
@@ -57,14 +57,14 @@ Formularios Inteligentes: Validación de campos y limpieza automática tras el e
 | :---: | :---: |
 | ![Vista Validacion](img/capture/capture_validacion.jpg) | ![Vista Enviado](img/capture/capture_msj_send.jpg) |
 
-Estructura del Repositorio
+## Estructura del Repositorio
 /
 ├── index.html          # Página principal
-├── bitacora.html       # Registro de hitos (Ya lo tenés creado)
-├── contacto.html       # Formulario (Cambiado de contact.html)
-├── alejandrorodriguez.html # Perfil de Alejandro
+├── bitacora.html       # Registro de acciones
+├── contact.html       # Formulario de contacto
 ├── sergiogalvan.html   # Perfil de Sergio
 ├── victoralvarez.html  # Perfil de Víctor
+├── alejandrorodriguez.html # Perfil de Alejandro
 ├── css/
 │   └── style.css         # Estilos globales
 ├── js/
@@ -72,5 +72,5 @@ Estructura del Repositorio
 ├── img/                # Organizado en /disc y /film
 └── README.md           # Este documento
 
-# Nota_del_Equipo
+## Nota_del_Equipo
 Este proyecto refleja la capacidad de trabajo colaborativo y la aplicación de conceptos de desarrollo frontend modernos, priorizando siempre la experiencia del usuario y la legibilidad del código.

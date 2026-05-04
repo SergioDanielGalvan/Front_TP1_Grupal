@@ -133,6 +133,7 @@ p {
 }
 
 .btn-primary {
+    margin-bottom: 25px;
     padding: 12px 30px;
     background: var(--accent);
     border: none;
@@ -257,6 +258,7 @@ body.dark-theme .contact-form textarea {
 }
 
 /* Estilos de Contacto mejorados */
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -286,9 +288,9 @@ body.dark-theme .contact-form textarea {
     box-shadow: 0 0 5px rgba(0, 184, 148, 0.2);
 }
 
-/* Reutilizamos tu botón primario para el formulario */
+
 .contact-form button {
-    align-self: center; /* Centra el botón de envío */
+    align-self: center; 
 }
 
 .profile-container {
@@ -350,7 +352,7 @@ body.dark-theme .contact-form textarea {
 .pelicula-item {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Alinea el botón a la derecha */
+    justify-content: space-between;
     padding: 15px;
     transition: var(--transition);
 }
@@ -358,7 +360,7 @@ body.dark-theme .contact-form textarea {
 .btn-film-round {
     width: 45px;
     height: 45px;
-    background-color: #e74c3c; /* Rojo cinematográfico */
+    background-color: #e74c3c;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -371,7 +373,7 @@ body.dark-theme .contact-form textarea {
 .play-icon {
     color: white;
     font-size: 1.2rem;
-    margin-left: 3px; /* Pequeño ajuste para centrar visualmente el triángulo */
+    margin-left: 3px;
 }
 
 .btn-film-round:hover {
@@ -396,7 +398,7 @@ body.dark-theme .contact-form textarea {
 .disco-item {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Empuja el botón al final */
+    justify-content: space-between;
     padding: 15px;
 }
 
@@ -426,6 +428,7 @@ body.dark-theme .contact-form textarea {
 }
 
 /* Contacto */
+
 .contact-container {
   padding: 4rem 5%;
   display: flex;
@@ -482,6 +485,7 @@ body.dark-theme .contact-form textarea {
 .contact-form button:hover {
   transform: scale(1.05);
 }
+
 
 /* ==========================================================================
    6. BREAKPOINTS (RESPONSIVE)
@@ -544,21 +548,21 @@ body.dark-theme .contact-form textarea {
 .bitacora-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 30px 0; /* Espacio superior e inferior para que no pegue al título */
+    margin: 30px 0;
     font-family: 'Roboto', sans-serif;
 }
 
 .bitacora-table th {
     background-color: var(--accent);
     color: white;
-    padding: 15px; /* Respiro para los encabezados */
+    padding: 15px;
     text-align: left;
 }
 
 .bitacora-table td {
-    padding: 25px 15px; /* Aumentamos el espacio vertical para evitar que el texto esté pegado */
+    padding: 25px 15px;
     border-bottom: 1px solid #eee;
-    line-height: 1.6; /* Mejora la lectura de las descripciones */
+    line-height: 1.6;
     vertical-align: top; 
 }
 

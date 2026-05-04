@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Verificamos si la clase existe para cambiar el texto y el estilo
             if (cardPerfil.classList.contains('tarjeta-resaltada')) {
-                cardPerfil.style.backgroundColor = '#e8f7f3';
+                cardPerfil.style.backgroundColor = '#84d4bf';
                 cardPerfil.style.border = '2px solid var(--accent)';
                 btnEstilo.innerText = 'Restaurar Estilo';
             } else {
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 5. BOTÓN CONOCER PROPÓSITO ---
+    // --- 5. BOTÓN INDEX ---
     const btnProposito = document.querySelector('.btn-primary');
     const mensajeProposito = document.getElementById('mensaje-proposito');
 
