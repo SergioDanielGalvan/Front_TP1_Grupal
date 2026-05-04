@@ -534,3 +534,43 @@ body.dark-theme .contact-form textarea {
     .logo-img { height: 30px; }
     .navbar { padding: 1rem 5%; }
 }
+
+
+
+/* ==========================================================================
+   ESTILOS PARA LA BITÁCORA (Control de Espaciado y Legibilidad)
+   ========================================================================== */
+
+.bitacora-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0; /* Espacio superior e inferior para que no pegue al título */
+    font-family: 'Roboto', sans-serif;
+}
+
+.bitacora-table th {
+    background-color: var(--accent);
+    color: white;
+    padding: 15px; /* Respiro para los encabezados */
+    text-align: left;
+}
+
+.bitacora-table td {
+    padding: 25px 15px; /* Aumentamos el espacio vertical para evitar que el texto esté pegado */
+    border-bottom: 1px solid #eee;
+    line-height: 1.6; /* Mejora la lectura de las descripciones */
+    vertical-align: top; 
+}
+
+/* Anchos de columna para evitar amontonamiento */
+.bitacora-table th:nth-child(1), 
+.bitacora-table td:nth-child(1) { width: 15%; } /* Fecha */
+
+.bitacora-table th:nth-child(2), 
+.bitacora-table td:nth-child(2) { width: 25%; } /* Responsable */
+
+/* Estilo para Modo Oscuro */
+body.dark-theme .bitacora-table td {
+    color: var(--text);
+    border-bottom: 1px solid #444;
+}
