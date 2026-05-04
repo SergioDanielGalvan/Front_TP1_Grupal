@@ -297,10 +297,24 @@ body.dark-theme .btn-film-round {
 }
 
 .film-item img {
-    width: 55px;
-    height: 80px;
+    width: 131px;    /* 55 px de ancho */
+    height: 197px;   /* 80 px de alto para mantener proporción de poster */
     border-radius: 4px;
     object-fit: cover;
+}
+
+.film-item summary {
+    text-align: left;
+    font-weight: bold;
+}
+
+.film-item p {
+    margin-left: 5;
+    text-align: left;
+}
+
+.film-item a {
+    margin-left: 5px;
 }
 
 .pelicula-item {
