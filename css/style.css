@@ -206,8 +206,8 @@ p {
 body.dark-theme {
     --light: #1e272e;    /* Fondo oscuro */
     --white: #2f3640;    /* Fondo de las tarjetas */
-    --primary: #f5f6fa;  /* Títulos claros */
-    --text: #dcdde1;     /* Párrafos claros */
+    --primary: #727379;  /* Títulos claros */
+    --text: #5b5e6a;     /* Párrafos claros */
 }
 
 /* Ajustes adicionales */
