@@ -133,7 +133,6 @@ p {
 }
 
 .btn-primary {
-    margin-bottom: 25px;
     padding: 12px 30px;
     background: var(--accent);
     border: none;
@@ -207,15 +206,14 @@ p {
 body.dark-theme {
     --light: #1e272e;    /* Fondo oscuro */
     --white: #2f3640;    /* Fondo de las tarjetas */
-    --primary: #727379;  /* Títulos claros */
-    --text: #5b5e6a;     /* Párrafos claros */
+    --primary: #f5f6fa;  /* Títulos claros */
+    --text: #dcdde1;     /* Párrafos claros */
 }
 
-/* Ajustes adicionales */
+/* Ajustes adicionales para que se vea prolijo */
 body.dark-theme .card-individual, 
-body.dark-theme .disc-item, 
-body.dark-theme .film-item,
-body.dark-theme .contact-form {
+body.dark-theme .disco-item, 
+body.dark-theme .pelicula-item {
     background-color: var(--white);
     color: var(--text);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -247,50 +245,6 @@ body.dark-theme .btn-spotify-round {
 body.dark-theme .btn-film-round {
     background-color: #ff7675;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
-
-/* Inputs en Modo Oscuro */
-body.dark-theme .contact-form input,
-body.dark-theme .contact-form textarea {
-    background-color: #3d4551;
-    color: white;
-    border: 1px solid #4b5563;
-}
-
-/* Estilos de Contacto mejorados */
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 5px rgba(0, 184, 148, 0.2);
-}
-
-
-.contact-form button {
-    align-self: center; 
 }
 
 .profile-container {
@@ -367,7 +321,7 @@ body.dark-theme .contact-form textarea {
 .pelicula-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Alinea el botón a la derecha */
     padding: 15px;
     transition: var(--transition);
 }
@@ -375,7 +329,7 @@ body.dark-theme .contact-form textarea {
 .btn-film-round {
     width: 45px;
     height: 45px;
-    background-color: #e74c3c;
+    background-color: #e74c3c; /* Rojo cinematográfico */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -388,7 +342,7 @@ body.dark-theme .contact-form textarea {
 .play-icon {
     color: white;
     font-size: 1.2rem;
-    margin-left: 3px;
+    margin-left: 3px; /* Pequeño ajuste para centrar visualmente el triángulo */
 }
 
 .btn-film-round:hover {
@@ -413,7 +367,7 @@ body.dark-theme .contact-form textarea {
 .disco-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Empuja el botón al final */
     padding: 15px;
 }
 
@@ -442,226 +396,8 @@ body.dark-theme .contact-form textarea {
     box-shadow: 0 6px 12px rgba(29, 185, 84, 0.3);
 }
 
-/* Contacto */
-
-.contact-container {
-  padding: 4rem 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.contact-container h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: var(--primary);
-}
-
-.contact-form {
-  background: var(--white);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  max-width: 600px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-}
-
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.contact-form button {
-  padding: 12px 30px;
-  background: var(--accent);
-  border: none;
-  color: white;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: transform 0.3s;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.contact-form button:hover {
-  transform: scale(1.05);
-}
-
-
 /* ==========================================================================
-   6. BREAKPOINTS (RESPONSIVE)
-   ========================================================================== */
-
-/* Tablets y Menú Hamburguesa (900px) */
-@media (max-width: 900px) {
-    .menu-toggle { display: flex; }
-    .nav-links {
-        position: absolute;
-        top: 100%; left: -100%;
-        flex-direction: column;
-        background-color: var(--white);
-        width: 100%;
-        transition: 0.4s;
-        text-align: center;
-    }
-    .nav-links.active { left: 0; }
-}
-
-/* Pantallas Medianas (A partir de 900px) */
-@media (min-width: 900px) {
-    .grid-integrantes { 
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .grid-integrantes .card:last-child {
-        grid-column: 1 / span 2;
-        width: 50%;
-        justify-self: center;
-    }
-}
-
-/* Pantallas Grandes (A partir de 1200px) */
-@media (min-width: 1200px) {
-    .grid-integrantes {
-        grid-template-columns: repeat(3, 1fr); 
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .grid-integrantes .card:last-child {
-        grid-column: auto; 
-        width: 100%;
-        justify-self: stretch;
-    }
-    .hero h1 { font-size: 4rem; }
-}
-
-/* Móviles Pequeños (400px) */
-@media (max-width: 400px) {
-    .logo-img { height: 30px; }
-    .navbar { padding: 1rem 5%; }
-}
-
-/* Esto se activa solo en pantallas de menos de 768px (celulares/tablets) */
-@media (max-width: 768px) {
-
-    .film-item, .disc-item {
-        display: flex;
-        flex-direction: column; /* Apila los elementos verticalmente */
-        align-items: center;    /* Centra horizontalmente */
-        text-align: center;     /* Centra el texto */
-        gap: 15px;
-        padding: 20px;
-        width: 100%;
-    }
-    /* 1. Evitar que el video sobresalga */
-    .film-item iframe {
-        width: 100% !important;  /* Obliga a usar el ancho del celular */
-        max-width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-        display: block;
-        margin: 0 auto;         /* Centra el video */
-    }
-
-    .disc-item iframe {
-        width: 100% !important; /* Para que no se corte a la derecha */
-        max-width: 350px;       /* Tamaño cómodo para celular */
-        height: 160px;          /* Mantiene la altura del reproductor */
-        border-radius: 12px;
-    }
-
-    /* 2. Centrar el título manteniendo la flecha visible */
-    .Sumario {
-        display: list-item;     /* Mantiene la flecha para que sepan que es clickeable */
-        text-align: center;
-        list-style-position: inside; /* Mueve la flecha hacia adentro para que el texto se centre */
-        cursor: pointer;
-        padding: 10px 0;
-    }
-
-    /* 3. Centrar el contenido que se despliega */
-    details p, details a {
-        text-align: center;
-        display: block;
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .film-item {
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    /* Ajuste para las imágenes de los discos */
-    .disc-item img {
-        width: 160px;
-        height: 160px;
-        object-fit: cover;
-    }
-    
-    /* Aseguramos que el texto del disco no quede pegado */
-    .disc-item p {
-        margin: 5px 0;
-        width: 100%;
-    }
-}
-
-
-/* ==========================================================================
-   7. ESTILOS PARA LA BITÁCORA (Control de Espaciado y Legibilidad)
-   ========================================================================== */
-
-.bitacora-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 30px 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.bitacora-table th {
-    background-color: var(--accent);
-    color: white;
-    padding: 15px;
-    text-align: left;
-}
-
-.bitacora-table td {
-    padding: 25px 15px;
-    border-bottom: 1px solid #eee;
-    line-height: 1.6;
-    vertical-align: top; 
-}
-
-/* Anchos de columna para evitar amontonamiento */
-.bitacora-table th:nth-child(1), 
-.bitacora-table td:nth-child(1) { width: 15%; } /* Fecha */
-
-.bitacora-table th:nth-child(2), 
-.bitacora-table td:nth-child(2) { width: 25%; } /* Responsable */
-
-/* Estilo para Modo Oscuro */
-body.dark-theme .bitacora-table td {
-    color: var(--text);
-    border-bottom: 1px solid #444;
-}
-
-/* ==========================================================================
-   8. PÁGINA Acerca de y Contacto (SECCIONES SIMPLES)
+   6. PÁGINA Acerca de y Contacto (SECCIONES SIMPLES)
    ========================================================================== */
 
 #cuerpo {
@@ -729,7 +465,7 @@ body.dark-theme .bitacora-table td {
 }
 
 /* ==========================================================================
-   9. PIE DE PÁGINA
+   7. PIE DE PÁGINA
    ========================================================================== */
 
 footer {
@@ -742,4 +478,56 @@ footer {
 }
  #correo::after {
     content: "info\40 mocosoft.com";
+}
+
+/* ==========================================================================
+   8. BREAKPOINTS (RESPONSIVE)
+   ========================================================================== */
+
+/* Tablets y Menú Hamburguesa (900px) */
+@media (max-width: 900px) {
+    .menu-toggle { display: flex; }
+    .nav-links {
+        position: absolute;
+        top: 100%; left: -100%;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        transition: 0.4s;
+        text-align: center;
+    }
+    .nav-links.active { left: 0; }
+}
+
+/* Pantallas Medianas (A partir de 900px) */
+@media (min-width: 900px) {
+    .grid-integrantes { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .grid-integrantes .card:last-child {
+        grid-column: 1 / span 2;
+        width: 50%;
+        justify-self: center;
+    }
+}
+
+/* Pantallas Grandes (A partir de 1200px) */
+@media (min-width: 1200px) {
+    .grid-integrantes {
+        grid-template-columns: repeat(3, 1fr); 
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .grid-integrantes .card:last-child {
+        grid-column: auto; 
+        width: 100%;
+        justify-self: stretch;
+    }
+    .hero h1 { font-size: 4rem; }
+}
+
+/* Móviles Pequeños (400px) */
+@media (max-width: 400px) {
+    .logo-img { height: 30px; }
+    .navbar { padding: 1rem 5%; }
 }
