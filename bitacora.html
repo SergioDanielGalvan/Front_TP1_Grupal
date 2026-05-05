@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora | MocoSoft</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar (Misma que tus otras páginas) -->
     <nav class="navbar">
         <div class="logo">
             <a href="index.html">
                 <img src="img/logo.png" alt="Logo MocoSoft" class="logo-img">
             </a>
         </div>
-        <button class="menu-toggle" id="mobile-menu">
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -22,28 +22,93 @@
         <ul class="nav-links" id="nav-list">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="index.html#nosotros">Nosotros</a></li>
-            <li><a href="bitacora.html">Bitácora</a></li>
-            <li><a href="contacto.html" class="activeS">Contacto</a></li>
+            <li><a href="bitacora.html" class="activeS">Bitácora</a></li>
+            <li><a href="contact.html">Contacto</a></li>
         </ul>
     </nav>
 
-    <main class="datos-bitacora">
-        <section class="cuerpo-bitacora">
-            <h1>Bitácora</h1>
-            <p>Bitácora</p>
-            <details closed>
-                <summary>Semana 1</summary>
-                <p>En la primera semana, nos enfocamos en establecer las bases de nuestro proyecto. Realizamos una lluvia de ideas para definir el propósito y los objetivos de MocoSoft. Además, comenzamos a diseñar la estructura de nuestro sitio web y a asignar roles dentro del equipo.</p>
-            </details>
-            <details closed>
-                <summary>Semana 2</summary>
-                <p>Durante la segunda semana, nos centramos en el desarrollo de la página de inicio. Implementamos un diseño atractivo y funcional, utilizando HTML y CSS para crear una experiencia de usuario agradable. También comenzamos a trabajar en la sección "Nosotros", donde presentamos a los integrantes del equipo.</p>
-            </details>
-            <button id="dark-mode-toggle" class="btn-primary" style="margin-top: 20px;">
-                🌙 Modo Oscuro
-            </button>
-        </section>
+    <main class="profile-container">
+        <div class="card-individual">
+            <h1>Bitácora de Desarrollo</h1>
+
+            <div class="info-grid">
+                <table class="bitacora-table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Responsable</th>
+                            <th>Tarea Realizada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>28/04/2026</td>
+                            <td>Sergio Galván</td>
+                            <td>Configuración inicial del repositorio en GitHub y definición de la arquitectura de carpetas.</td>
+                        </tr>
+                        <tr>
+                            <td>30/04/2026</td>
+                            <td>Equipo MocoSoft</td>
+                            <td>Definición de la identidad visual: selección de paleta de colores y tipografías Poppins/Roboto.</td>
+                        </tr>
+                        <tr>
+                            <td>01/05/2026</td>
+                            <td>Alejandro Rodriguez</td>
+                            <td>Desarrollo de la página de perfil personal e integración de multimedia (Spotify/YouTube).</td>
+                        </tr>
+                        <tr>
+                            <td>01/05/2026</td>
+                            <td>Sergio Galván</td>
+                            <td>Optimización de recursos gráficos y compresión de imágenes para mejorar el rendimiento.</td>
+                        </tr>
+                        <tr>
+                            <td>02/05/2026</td>
+                            <td>Victor Alvarez</td>
+                            <td>Investigación e implementación de transiciones CSS para mejorar la experiencia de usuario.</td>
+                        </tr>
+                        <tr>
+                            <td>02/05/2026</td>
+                            <td>Equipo MocoSoft</td>
+                            <td>Programación del Modo Oscuro utilizando JavaScript y almacenamiento en LocalStorage.</td>
+                        </tr>
+                        <tr>
+                            <td>03/05/2026</td>
+                            <td>Victor Álvarez</td>
+                            <td>Creación de la página de contacto y configuración de la lógica de validación del formulario.</td>
+                        </tr>
+                        <tr>
+                            <td>03/05/2026</td>
+                            <td>Sergio Galván</td>
+                            <td>Refactorización semántica: inclusión de etiquetas &lt;header&gt; y &lt;main&gt; en todas las páginas.</td>
+                        </tr>
+                        <tr>
+                            <td>03/05/2026</td>
+                            <td>Alejandro Rodriguez</td>
+                            <td>Control de Calidad: Ajuste de contraste y legibilidad en el Modo Oscuro tras detectar fallos visuales.</td>
+                        </tr>
+                        <tr>
+                            <td>03/05/2026</td>
+                            <td>Equipo MocoSoft</td>
+                            <td>Testeo cruzado de navegación y enlaces para asegurar la correcta comunicación entre archivos.</td>
+                        </tr>
+                        <tr>
+                            <td>03/05/2026</td>
+                            <td>Alejandro Rodriguez</td>
+                            <td>Documentación final: Redacción del README.md y carga de la bitácora de desarrollo completa.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="nav-footer">
+                <a href="javascript:history.back()" class="btn-back">← Volver Atrás</a>
+            </div>
+        </div>
     </main>
+
+    <footer>
+        <p>&copy; 2026 MocoSoft - Todos los derechos reservados - Trabajo Práctico 1</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>

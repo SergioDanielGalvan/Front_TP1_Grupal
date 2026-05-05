@@ -6,10 +6,12 @@
     <title>MocoSoft</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="/img/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <!-- Standard-Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+    <!-- Legacy browsers -->
+    <link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
 </head>
 <body>
 
@@ -28,10 +30,11 @@
         </button>
 
         <ul class="nav-links" id="nav-list">
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html" class="activeS">Inicio</a></li>
             <li><a href="#nosotros">Nosotros</a></li>
             <li><a href="bitacora.html">Bitácora</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
         </ul>
     </nav>
 
@@ -43,38 +46,40 @@
             <p id="mensaje-proposito" class="hidden">Nuestro objetivo es dominar las tecnologías del Frontend para transformar ideas en experiencias reales.</p>
         </div>
     </header>
+    <main>
+        <section id="nosotros" class="team-container">
+            <h2>Nuestros Integrantes</h2>
+            <div class="grid-integrantes">
+                <a href="sergiogalvan.html" class="card">
+                    <div class="card-img">
+                        <img src="img/avatarsergio.png" alt="Avatar Sergio">
+                    </div>
+                    <h3>Sergio Daniel Galván</h3>
+                    <span class="view-profile">Perfil</span>
+                </a>
 
-    <section id="nosotros" class="team-container">
-        <h2>Nuestros Integrantes</h2>
-        <div class="grid-integrantes">
-            <a href="sergiogalvan.html" class="card">
-                <div class="card-img">
-                    <img src="img/avatarsergio.png" alt="Avatar Sergio">
-                </div>
-                <h3>Sergio Daniel Galván</h3>
-                <span class="view-profile">Perfil</span>
-            </a>
+                <a href="victoralvarez.html" class="card">
+                    <div class="card-img">
+                        <img src="img/avatarvictor.png" alt="Avatar Victor">
+                    </div>
+                    <h3>Victor Álvarez</h3>
+                    <span class="view-profile">Perfil</span>
+                </a>
 
-            <a href="victoralvarez.html" class="card">
-                <div class="card-img">
-                    <img src="img/avatarvictor.png" alt="Avatar Victor">
-                </div>
-                <h3>Víctor Álvarez</h3>
-                <span class="view-profile">Perfil</span>
-            </a>
-
-            <a href="alejandrorodriguez.html" class="card">
-                <div class="card-img">
-                    <img src="img/avataralejandro.png" alt="Avatar Hector">
-                </div>
-                <h3>Alejandro Sebastian Rodriguez</h3>
-                <span class="view-profile">Perfil</span>
-            </a>
-        </div>
-    </section>
-
+                <a href="alejandrorodriguez.html" class="card">
+                    <div class="card-img">
+                        <img src="img/avataralejandro.png" alt="Avatar Hector">
+                    </div>
+                    <h3>Alejandro Sebastian Rodriguez</h3>
+                    <span class="view-profile">Perfil</span>
+                </a>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2026 MocoSoft - Todos los derechos reservados - Trabajo Práctico 1</p>
+        <!-- Ocultamos por CSS los datos de correo para eludir los boots de spam, pero se pueden mostrar fácilmente para el usuario final con un botón o al hacer clic en el texto -->
+        <address id="correo">Correo: </address>
     </footer>
 
     <script src="js/main.js"></script>
