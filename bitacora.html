@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora | MocoSoft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar (Misma que tus otras páginas) -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo MocoSoft" class="logo-img">
+            </a>
+        </div>
+        <button class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#nosotros">Nosotros</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+            <li><a href="contacto.html" class="activeS">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="datos-bitacora">
+        <section class="cuerpo-bitacora">
+            <h1>Bitácora</h1>
+            <p>Bitácora</p>
+            <details closed>
+                <summary>Semana 1</summary>
+                <p>En la primera semana, nos enfocamos en establecer las bases de nuestro proyecto. Realizamos una lluvia de ideas para definir el propósito y los objetivos de MocoSoft. Además, comenzamos a diseñar la estructura de nuestro sitio web y a asignar roles dentro del equipo.</p>
+            </details>
+            <details closed>
+                <summary>Semana 2</summary>
+                <p>Durante la segunda semana, nos centramos en el desarrollo de la página de inicio. Implementamos un diseño atractivo y funcional, utilizando HTML y CSS para crear una experiencia de usuario agradable. También comenzamos a trabajar en la sección "Nosotros", donde presentamos a los integrantes del equipo.</p>
+            </details>
+            <button id="dark-mode-toggle" class="btn-primary" style="margin-top: 20px;">
+                🌙 Modo Oscuro
+            </button>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
