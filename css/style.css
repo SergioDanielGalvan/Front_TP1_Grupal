@@ -554,6 +554,72 @@ body.dark-theme .contact-form textarea {
     .navbar { padding: 1rem 5%; }
 }
 
+/* Esto se activa solo en pantallas de menos de 768px (celulares/tablets) */
+@media (max-width: 768px) {
+
+    .film-item, .disc-item {
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center;    /* Centra horizontalmente */
+        text-align: center;     /* Centra el texto */
+        gap: 15px;
+        padding: 20px;
+        width: 100%;
+    }
+    /* 1. Evitar que el video sobresalga */
+    .film-item iframe {
+        width: 100% !important;  /* Obliga a usar el ancho del celular */
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        display: block;
+        margin: 0 auto;         /* Centra el video */
+    }
+
+    .disc-item iframe {
+        width: 100% !important; /* Para que no se corte a la derecha */
+        max-width: 350px;       /* Tamaño cómodo para celular */
+        height: 160px;          /* Mantiene la altura del reproductor */
+        border-radius: 12px;
+    }
+
+    /* 2. Centrar el título manteniendo la flecha visible */
+    .Sumario {
+        display: list-item;     /* Mantiene la flecha para que sepan que es clickeable */
+        text-align: center;
+        list-style-position: inside; /* Mueve la flecha hacia adentro para que el texto se centre */
+        cursor: pointer;
+        padding: 10px 0;
+    }
+
+    /* 3. Centrar el contenido que se despliega */
+    details p, details a {
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .film-item {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Ajuste para las imágenes de los discos */
+    .disc-item img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+    }
+    
+    /* Aseguramos que el texto del disco no quede pegado */
+    .disc-item p {
+        margin: 5px 0;
+        width: 100%;
+    }
+}
 
 
 /* ==========================================================================

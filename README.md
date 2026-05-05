@@ -35,6 +35,24 @@ Gestión de eventos (addEventListener) para formularios y menús.
 Control de Versiones: Git & GitHub (flujo de trabajo colaborativo mediante ramas y Pull Requests).
 
 ## Funcionalidades_Destacadas
+
+Se implementó una funcionalidad mediante JavaScript que permite alternar la visibilidad del propósito institucional. 
+Utilizando el método `classList.toggle`, el sitio gestiona la aparición de contenido oculto sin recargar la página. Además, se incluyó lógica condicional para actualizar el texto del botón de acción (`Conocer Propósito` / `Ocultar Propósito`) en tiempo real según el estado del contenedor.
+| Botón Conocer Propósito | Botón Ocultar Propósito |
+| :---: | :---: |
+| ![Vista Conocer](img/capture/capture_index.jpg) | ![Vista Ocultar](img/capture/capture_index2.jpg) |
+
+Como parte de los requisitos del proyecto, se puede acceder a las páginas individuales con la información pedida.
+
+*   [Perfil de Sergio Daniel Galván](sergiogalvan.html)
+*   [Perfil de Víctor Álvarez](victoralvarez.html)
+*   [Perfil de Alejandro Rodriguez](alejandrorodriguez.html)
+
+Navegación Bidireccional: Cada página cuenta con un botón de retorno ("Volver atrás") claramente identificado.
+| Botón Volver Atrás |
+| :---: |
+| ![Botón Volver Atrás](img/capture/capture_volveratras.jpg) |
+
 Modo Oscuro Persistente: El usuario puede cambiar el tema del sitio, y su preferencia se guarda en el navegador para futuras visitas.
 | Modo Claro | Modo Oscuro |
 | :---: | :---: |
@@ -46,11 +64,14 @@ Menú Hamburguesa: Navegación optimizada para dispositivos móviles (Responsive
 | ![Vista Menu Responsive](img/capture/capture_menu_responsive.jpg) | ![Vista Menu](img/capture/capture_menu.jpg) |
 
 Bitácora Integrada: Un registro detallado de la evolución del proyecto accesible desde el menú principal.
+| Bitácora |
+| :---: |
+| ![Html Bitácora](img/capture/capture_bitacora.jpg) |
 
 Galería Multimedia: Integración dinámica de trailers de cine y pistas de audio (Spotify/YouTube).
 | Menu Responsive |
 | :---: |
-| ![Vista Button](img/capture/capture_button_spotify_youtube.jpg) |
+| ![Vista Button](img/capture/capture_iframes.jpg) |
 
 Formularios Inteligentes: Validación de campos y limpieza automática tras el envío exitoso.
 | Contac Val | Contact Send |
@@ -69,7 +90,7 @@ Formularios Inteligentes: Validación de campos y limpieza automática tras el e
 │   └── style.css         # Estilos globales
 ├── js/
 │   └── main.js         # Lógica de Modo Oscuro y botones
-├── img/                # Organizado en /disc y /film
+├── img/                # Organizado en /capture, /disc y /film
 └── README.md           # Este documento
 
 ## Nota_del_Equipo
